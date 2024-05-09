@@ -16,11 +16,16 @@
 function insertionSort(nums) {
   for (let i = 1; i < nums.length; i++) {
     const element = nums[i];
-    let n = i
-    for ( n ==! 1; n--;) {
-      
+    let n = i;
+    
+    for (n == !0; n--; ) {
+      if (nums[n] < nums[n - 1]) {
+        nums[n] = nums[n - 1];
+        nums[n - 1] = element;
+      }
     }
   }
+  return nums;
 }
 
 // unit tests
