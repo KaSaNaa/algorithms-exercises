@@ -14,7 +14,13 @@
 */
 
 function insertionSort(nums) {
-  // code goes here
+  for (let i = 1; i < nums.length; i++) {
+    const element = nums[i];
+    let n = i
+    for ( n ==! 1; n--;) {
+      
+    }
+  }
 }
 
 // unit tests
