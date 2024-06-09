@@ -16,15 +16,15 @@
 function insertionSort(nums) {
   for (let i = 1; i < nums.length; i++) {
     const element = nums[i];
-    let n = i;
-    
-    for (n == !0; n--; ) {
-      if (nums[n] < nums[n - 1]) {
-        nums[n] = nums[n - 1];
-        nums[n - 1] = element;
-      }
+    let n = i - 1;
+
+    while (n >= 0 && nums[n] > element) {
+      nums[n + 1] = nums[n];
+      n--;
     }
+    nums[n + 1] = element;
   }
+  snapshot(nums);
   return nums;
 }
 
